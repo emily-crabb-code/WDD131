@@ -62,5 +62,11 @@ header, footer {
         grid-row: 1/6;
     }
 
+    .main-nav li{
+        display: inline;
+        padding: 20px;
+        
+    }
+
 }
           
