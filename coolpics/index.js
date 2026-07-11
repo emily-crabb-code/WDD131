@@ -8,7 +8,8 @@ gallery.addEventListener('click', openModal);
 
 function openModal(e) {
     
-// Code to show modal  - Use event parameter 'e'   
+// Code to show modal  - Use event parameter 'e'
+    
     let imageSrc = e.target.src;
     
     modalImage.src = imageSrc;
@@ -31,3 +32,11 @@ modal.addEventListener('click', (event) => {
     }
 });
           
+const menuButton = document.querySelector(".menu-label");
+const navLinks = document.querySelector(".links");
+
+
+menuButton.addEventListener("click", () => {
+    
+    navLinks.classList.toggle('show');
+})

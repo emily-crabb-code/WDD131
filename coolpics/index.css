@@ -26,6 +26,12 @@ a {
     display: none;
 }
 
+.links.show {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
 .menu-label {
     display: block;
     cursor: pointer;
@@ -57,6 +63,11 @@ img {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 5px 5px 15px black;
+}
+
+dialog img {
+    width: 500px;
+    height: 500px;
 }
 
 @media screen and (min-width: 500px) and (max-width: 999px) {
