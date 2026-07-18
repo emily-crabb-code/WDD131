@@ -1,0 +1,199 @@
+* {
+
+}
+
+header, footer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    
+    background-color: #2b4162;
+}
+
+header img{
+    width: 250px;
+    height: auto;
+    padding: 5px;
+}
+
+header nav {
+    display: none;
+}
+
+header nav.open {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/-1
+}
+
+nav a {
+    color: white;
+    padding: 20px;
+}
+
+nav a:hover {
+    background-color: #e7c24f;
+    color:#2b4162;
+}
+
+.menu-button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    grid-column: 3;
+    justify-self: end;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.open a {
+    display: inline-block;
+}
+
+.menu-button div {
+    transition: transform .5s ease-in-out, opacity .5s ease-in-out, background-color .5s linear;
+}
+
+.change div {
+    background-color: #a43312;
+}
+.change .bar1 {
+  transform: translate(0, 9px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -9px) rotate(45deg);
+}
+
+
+
+.heroImg {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.heroImg::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.heroImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroText {
+    text-align: left;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.heroText h1 {
+    font-size: 60px;
+}
+
+.heroText p {
+    font-size: 30px;
+}
+
+.heroText button {
+    font-size: 25px;
+}
+
+
+
+.big-article {
+    display: flex; 
+    gap: 1.5rem;
+    width: 80%;
+    min-width: 600px;
+    background-color: #e7c24f;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px gray;
+    margin: 5rem auto;
+
+}
+.big-article img {
+    width: 50%;
+    height: 450px;
+    object-fit: cover;
+}
+.big-text {
+    padding: 1rem;
+    font-size: 40px;
+}
+
+.big-text button {
+    font-size: 25px;
+}
+
+
+
+
+.small-articles {
+    display: flex; 
+    gap: 1.5rem;
+    width: 550px;
+    background-color: #e7c24f;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px gray;
+    margin: 5rem auto;
+}
+.small-articles img {
+    width: 50%;
+    height: 450px;
+    object-fit: cover;
+}
+.small-articles p {
+    padding: 1rem;
+    font-size: 40px;
+}
+
+.small-articles button {
+    font-size: 25px;
+}
+
+
+
+
+footer img {
+    height: 100px;
+    width: auto;
+    padding: 5px;
+}
+
+footer a {
+    align-self: end;
+    padding: 20px;
+}
+
+@media screen and (min-width: 800px) {
+    header nav {
+    grid-column: 2/4;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: end; 
+    
+    }
+    nav a {
+        display: inline-block;
+    }
+    .menu-button {
+    display: none;
+    }
+}
